@@ -1,19 +1,35 @@
-.btnplay {
+.btnactive {
   background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
     0% no-repeat padding-box;
   border-radius: 25px;
   opacity: 1;
   border: none;
   color: #ffffff;
-  text-align: left;
   display: flex;
-  justify-content: space-around;
-  padding: 1em 2em;
+  padding: 0.8em 2em;
   font-size: 0.75rem;
+  align-items: center;
 }
-.play {
-  background: transparent url("../../assets/play.svg") 0% 0% no-repeat
-    padding-box;
+.btninactive {
+  border: 1px solid #ffffff;
+  border-radius: 25px;
   opacity: 1;
-  padding-right: 1em;
+  color: #ffffff;
+  background-color: transparent;
+  display: flex;
+  padding: 0.8em 2em;
+  font-size: 0.75rem;
+  align-items: center;
+}
+
+.btnactive > img {
+  margin-right: 1em;
+}
+
+.btninactive > img {
+  margin-right: 1em;
+}
+
+img {
+  width: 1em;
 }
