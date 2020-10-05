@@ -1,8 +1,19 @@
-.btn {
-  border-radius: 20px;
-  font-size: 1.2rem;
-  color: white;
-  background: #016b6b;
+.btnplay {
+  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 25px;
+  opacity: 1;
   border: none;
-  padding: 10px 20px;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 2em;
+  font-size: 0.75rem;
+}
+.play {
+  background: transparent url("../../assets/play.svg") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  padding-right: 1em;
 }
