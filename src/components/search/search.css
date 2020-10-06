@@ -1,14 +1,11 @@
 .search {
-  color: #ffffff;
   background-color: #292e4b;
   border: none;
   border-radius: 25px;
   padding: 0.9em 2em;
   font-size: 0.75rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-width: 10%;
 }
 
 .search > img {
@@ -22,5 +19,5 @@
   color: #ffffff;
   opacity: 20%;
   text-align: center;
-  font-size: 13px;
+  font-size: 0.75rem;
 }
