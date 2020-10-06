@@ -1,4 +1,4 @@
-.btnactive {
+.btn-primary {
   background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
     0% no-repeat padding-box;
   border-radius: 25px;
@@ -10,7 +10,7 @@
   font-size: 0.75rem;
   align-items: center;
 }
-.btninactive {
+.btn-secondary {
   border: 1px solid #ffffff;
   border-radius: 25px;
   opacity: 1;
@@ -22,11 +22,11 @@
   align-items: center;
 }
 
-.btnactive > img {
+.btn-primary > img {
   margin-right: 1em;
 }
 
-.btninactive > img {
+.btn-secondary > img {
   margin-right: 1em;
 }
 
