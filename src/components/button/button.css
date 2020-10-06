@@ -1,20 +1,21 @@
 .btn {
   color: #ffffff;
   border-radius: 25px;
-  display: flex;
-  padding: 0.8em 2em;
+  padding: 0.9em 2em;
   font-size: 0.75rem;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  min-width: 100%;
 }
 
 .btn-primary {
-  background: transparent linear-gradient(180deg, #ed8770 0%, #d9519d 100%) 0%
-    0% no-repeat padding-box;
+  background-image: linear-gradient(#ed8770, #d9519d);
   border: none;
 }
 .btn-secondary {
-  border: 1px solid #ffffff;
   background-color: transparent;
+  border: 1px solid #ffffff;
 }
 
 .btn > img {
