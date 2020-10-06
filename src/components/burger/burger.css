@@ -1,0 +1,17 @@
+.burger {
+  justify-content: left;
+  margin: 5px;
+}
+
+.burgerbox {
+  border-color: white;
+  border: solid 3px;
+  border-radius: 25px;
+  width: 50px;
+  height: 2px;
+  margin: 7.5px;
+}
+
+.burgerbox:nth-child(2) {
+  width: 40px;
+}
