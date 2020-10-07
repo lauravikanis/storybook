@@ -1,20 +1,23 @@
+footer {
+  width: 100vw;
+  /* border: solid white 1px; */
+  box-shadow: -5px -5px 10px black;
+}
 .bottom-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  max-width: 60%;
+  margin: 0 auto;
   font-size: 0.8rem;
   font-weight: 500;
   color: #d9519d;
-  /* border: solid white 1px; */
-  box-shadow: -5px -5px 10px black;
 }
 
 .item {
   display: flex;
   flex-direction: column;
   padding: 0.75em;
-  margin: 0 1.75em;
 }
 
 .item > img {
