@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  margin: 5px;
   font-size: 0.8rem;
   font-weight: 500;
   color: #d9519d;
@@ -14,7 +13,7 @@
 .item {
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 0.75em;
   margin: 0 1.75em;
 }
 
