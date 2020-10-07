@@ -1,0 +1,23 @@
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d9519d;
+  /* border: solid white 1px; */
+  box-shadow: -5px -5px 10px black;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0 1.75em;
+}
+
+.item > img {
+  margin: 0.75em;
+}
