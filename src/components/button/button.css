@@ -1,5 +1,5 @@
 .btn {
-  color: #ffffff;
+  color: var(--fontcolor-primary);
   border-radius: 25px;
   padding: 0.9em 2em;
   font-size: 0.75rem;
