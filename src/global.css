@@ -27,9 +27,11 @@
 
 *,
 *::after,
-@@ -8,
-6 + 8,
-8 @@ html {
+*::before {
+  box-sizing: border-box;
+}
+
+html {
   font-size: 16px;
   background-color: #383b49;
   color: #ffffff;
