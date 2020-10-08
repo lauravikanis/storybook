@@ -9,11 +9,11 @@
   min-width: 100%;
 }
 
-.btn-primary {
+.btn_primary {
   background-image: linear-gradient(#ed8770, #d9519d);
   border: none;
 }
-.btn-secondary {
+.btn_secondary {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
