@@ -30,11 +30,16 @@
 *::before {
   box-sizing: border-box;
 }
-
+:root {
+  --backgroundcolor-primary: #181b2c; /*darkblue*/
+  --backgroundcolor-secondary: #151827; /*darkdarkblue*/
+  --fontcolor-primary: white;
+  --fontcolor-active: #d9519d;
+}
 html {
   font-size: 16px;
-  background-color: #181b2c;
-  color: #ffffff;
+  background-color: var(--backgroundcolor-primary);
+  color: var(--fontcolor-primary);
 }
 
 body {

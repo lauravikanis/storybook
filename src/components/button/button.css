@@ -1,5 +1,5 @@
 .btn {
-  color: #ffffff;
+  color: var(--fontcolor-primary);
   border-radius: 25px;
   padding: 0.9em 2em;
   font-size: 0.75rem;
@@ -9,11 +9,11 @@
   min-width: 100%;
 }
 
-.btn-primary {
+.btn_primary {
   background-image: linear-gradient(#ed8770, #d9519d);
   border: none;
 }
-.btn-secondary {
+.btn_secondary {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
