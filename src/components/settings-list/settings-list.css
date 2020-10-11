@@ -1,0 +1,31 @@
+.settings ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: fit-content;
+  padding: 0;
+  margin: 0 auto;
+  width: auto;
+}
+.settings a {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  width: 100vw;
+  padding: 0 0 0 1em;
+  margin: 0;
+  height: auto;
+}
+.settings h4 {
+  border: solid rgba(255, 255, 255, 0.2);
+  border-width: 0 0 0.5px 0;
+  padding: 0 0 1em 0;
+  text-align: left;
+}
+
+.list-item img {
+  margin: 0;
+  padding: 0 2em 1em 1em;
+}
