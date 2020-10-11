@@ -1,6 +1,7 @@
 .settings ul {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: fit-content;
   padding: 0;
   margin: 0 auto;
   width: auto;
@@ -15,9 +16,10 @@
   width: 100vw;
   padding: 0 0 0 1em;
   margin: 0;
+  height: auto;
 }
 .settings h4 {
-  border: solid rgba(255, 255, 255, 0.5);
+  border: solid rgba(255, 255, 255, 0.2);
   border-width: 0 0 0.5px 0;
   padding: 0 0 1em 0;
   text-align: left;
