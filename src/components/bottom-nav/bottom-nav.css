@@ -7,12 +7,13 @@ footer {
 .bottom-nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   max-width: 60%;
-  margin: 0 auto 0.5em;
+  margin: 0 auto;
   font-size: 0.8rem;
   font-weight: 500;
   color: #d9519d;
+  bottom: 0;
 }
 
 .item {
