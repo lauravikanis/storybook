@@ -1,55 +1,57 @@
-import playActionSrc from "../../assets/play-action.svg";
 import "./track.css";
+import playActionSrc from "../../assets/play-action.svg";
+import pauseActionSrc from "../../assets/icon-pause-gradient.svg";
+import { createElement } from "../../utils/elements";
 
-export function createTrackElement(track) {
-  //   titel und artist wird durch konstante in klammern definiert
-
-  const trackElement = document.createElement("div");
-  trackElement.innertext - "this is a track";
-  trackElement.className = "track";
-
-  //   div für linie
-  const lineElement = document.createElement("div");
-  lineElement.className = "track__line";
-
-  //   div für artist  + title
-  const infoElement = document.createElement("div");
-  infoElement.className = "track__info";
-
-  const titelElement = document.createElement("h3");
-  titelElement.innerText = track.title;
-  titelElement.className = "title";
-
-  const artistElement = document.createElement("p");
-  artistElement.innerText = track.artist;
-  artistElement.className = "artist";
-
-  //   Bild
-  const imgElement = document.createElement("img");
-  imgElement.src = track.imgSrc;
-  imgElement.alt = `Image of ${track.artist}`;
-  imgElement.className = "track__image";
-
-  const buttonElement = document.createElement("button");
-  const playActionElement = document.createElement("img");
-  playActionElement.src = playActionSrc;
-  buttonElement.className = "track__button";
-
+export const createTrackElement = (track) => {
   const audioElement = new Audio(track.audioSrc);
-  buttonElement.onclick = function () {
-    // alert("TaDa!");
-    audioElement.play();
-  };
-  // buttonElement.ondblclick = function () {
-  //   // alert("This is The End");
-  //   audioElement.pause;
-  // };
+  const playActionElement = createElement("img", {
+    src: playActionSrc,
+  });
 
-  //   Button mit Click function
-  buttonElement.append(playActionElement);
-  infoElement.append(titelElement, artistElement);
-  lineElement.append(infoElement, buttonElement);
-  trackElement.append(imgElement, lineElement);
-
+  const trackElement = createElement("div", {
+    className: "track",
+    children: [
+      createElement("img", {
+        className: "track__image",
+        src: track.imgSrc,
+        alt: `Image of ${track.artist}`,
+      }),
+      createElement("div", {
+        className: "track__description",
+        children: [
+          createElement("h3", {
+            innerText: track.title,
+          }),
+          createElement("p", {
+            innerText: track.artist,
+          }),
+        ],
+      }),
+      createElement("button", {
+        className: "track__button",
+        children: [playActionElement],
+        onclick: () => {
+          if (!audioElement.paused) {
+            audioElement.pause();
+            setPlayIcon(playActionElement);
+          } else {
+            audioElement.play();
+            setPauseIcon(playActionElement);
+          }
+        },
+      }),
+    ],
+  });
   return trackElement;
-}
+};
+
+const setPlayIcon = (element) => {
+  element.src = playActionSrc;
+  element.alt = "Play Button";
+};
+
+const setPauseIcon = (element) => {
+  element.src = pauseActionSrc;
+  element.alt = "Pause Button";
+};
