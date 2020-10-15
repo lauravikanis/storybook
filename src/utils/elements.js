@@ -1,9 +1,9 @@
 export const createElement = (tagName, props) => {
   const element = document.createElement(tagName);
-  Object.assign(element, props);
-
-  //   element.className = props.className;
-  //   element.innerText = props.innerText;
-
+  const { children, ...otherProps } = props;
+  Object.assign(element, otherProps);
+  if (children) {
+    element.append(...children);
+  }
   return element;
 };
