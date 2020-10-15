@@ -1,7 +1,7 @@
 import playActionSrc from "../../assets/play-action.svg";
 import "./track.css";
 
-export function createTrackElement(title, artist) {
+export function createTrackElement(track) {
   //   titel und artist wird durch konstante in klammern definiert
 
   const trackElement = document.createElement("div");
@@ -17,28 +17,33 @@ export function createTrackElement(title, artist) {
   infoElement.className = "track__info";
 
   const titelElement = document.createElement("h3");
-  titelElement.innerText = title;
+  titelElement.innerText = track.title;
   titelElement.className = "title";
 
   const artistElement = document.createElement("p");
-  artistElement.innerText = artist;
+  artistElement.innerText = track.artist;
   artistElement.className = "artist";
 
   //   Bild
   const imgElement = document.createElement("img");
-  imgElement.src =
-    "https://i.pinimg.com/564x/2c/7d/99/2c7d99b45744abba70aea6be9127ea34.jpg";
-
-  imgElement.alt = `Image of ${artist}`;
+  imgElement.src = track.imgSrc;
+  imgElement.alt = `Image of ${track.artist}`;
   imgElement.className = "track__image";
 
   const buttonElement = document.createElement("button");
   const playActionElement = document.createElement("img");
   playActionElement.src = playActionSrc;
-  buttonElement.className = "track-button";
+  buttonElement.className = "track__button";
+
+  const audioElement = new Audio(track.audioSrc);
   buttonElement.onclick = function () {
-    alert("This is not working");
+    // alert("TaDa!");
+    audioElement.play();
   };
+  // buttonElement.ondblclick = function () {
+  //   // alert("This is The End");
+  //   audioElement.pause;
+  // };
 
   //   Button mit Click function
   buttonElement.append(playActionElement);
