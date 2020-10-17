@@ -1,4 +1,30 @@
-.firstrow {
+.Controls {
+  border: solid 5px red;
   display: flex;
-  border: solid white;
+  flex-direction: column;
+  max-width: 100vw;
+  text-align: center;
+}
+
+.buttonRow__primary {
+  background: blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonRow__secondary {
+  background: pink;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonRow_button__primary {
+  height: 40px;
+  background: none;
+  border: none;
+}
+
+.buttonRow_button__secondary {
+  height: 35px;
+  background: none;
+  border: none;
 }

@@ -1,57 +1,60 @@
 import "./player.css";
+import forwardElementSrc from "../../assets/forward-primary.svg";
+import playElementSrc from "../../assets/play-primary.svg";
+import backwardElementSrc from "../../assets/backward-primary.svg";
+
 import { createElement } from "../../utils/elements";
 
-export const createControlElement = (control) => {
-  // hier fehlt noch was?
+export const createControlElement = () => {
+  const forwardElement = createElement("img", {
+    src: forwardElementSrc,
+    alt: "play",
+  });
+  const playElement = createElement("img", {
+    src: playElementSrc,
+    alt: "play",
+  });
+
+  const backwardElement = createElement("img", {
+    src: backwardElementSrc,
+    alt: "play",
+  });
+
   const controlElement = createElement("div", {
     className: "Controls",
     children: [
       createElement("div", {
-        className: "firstRow",
+        className: "buttonRow__primary",
         children: [
           createElement("button", {
-            className: "rewind",
-            // children: [createElement[rewindElement],
+            className: "buttonRow_button__primary",
             onclick: () => {
               alert("rewind me!");
             },
-            children: [
-              createElement("h5", {
-                innerText: "Play",
-              }),
-            ],
+            children: [backwardElement],
           }),
           createElement("button", {
-            className: "play",
-            // children: [playElement],
+            className: "buttonRow_button__primary",
             onclick: () => {
               alert("play!");
             },
-            children: [
-              createElement("h5", {
-                innerText: "Rewind",
-              }),
-            ],
+            children: [playElement],
           }),
           createElement("button", {
-            className: "forward",
+            className: "buttonRow_button__primary",
             // children: [forwardElement],
             onclick: () => {
               alert("forward me!");
             },
-            children: [
-              createElement("h5", {
-                innerText: "forward",
-              }),
-            ],
+            children: [forwardElement],
           }),
         ],
       }),
       createElement("div", {
-        className: "secondRow",
+        className: "buttonRow__secondary",
         children: [
           createElement("button", {
-            className: "subhead",
+            className: "buttonRow_button__secondary",
             // children: [createElement[rewindElement],
             onclick: () => {
               alert("Playlist");
@@ -63,7 +66,7 @@ export const createControlElement = (control) => {
             ],
           }),
           createElement("button", {
-            className: "subhead",
+            className: "buttonRow_button__secondary",
             // children: [createElement[rewindElement],
             onclick: () => {
               alert("Shufle!");
@@ -75,7 +78,7 @@ export const createControlElement = (control) => {
             ],
           }),
           createElement("button", {
-            className: "subhead",
+            className: "buttonRow_button__secondary",
             // children: [createElement[rewindElement],
             onclick: () => {
               alert("Repeat!");
@@ -87,7 +90,7 @@ export const createControlElement = (control) => {
             ],
           }),
           createElement("button", {
-            className: "rewind",
+            className: "buttonRow_button__secondary",
             // children: [createElement[rewindElement],
             onclick: () => {
               alert("Equalize!");
@@ -99,7 +102,7 @@ export const createControlElement = (control) => {
             ],
           }),
           createElement("button", {
-            className: "rewind",
+            className: "buttonRow_button__secondary",
             // children: [createElement[rewindElement],
             onclick: () => {
               alert("Love!");
